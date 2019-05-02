@@ -1,49 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8" />
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>ABAP Unit - Why not use?</title>
+	<meta name="description" content="ABAP Unit - Why not use?" />
+	<meta name="author" content="Valdir Mendes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/reveal.css" />
+	<link rel="stylesheet" href="css/theme/league.css" id="theme" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css" />
+	<style type="text/css">
+		.flex {
+			display: flex;
+		}
+
+		.flex-item {
+			display: flex;
+		}
+
+		.flex-1 {
+			flex-grow: 1;
+		}
+	</style>
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement("link");
+		link.rel = "stylesheet";
+		link.type = "text/css";
+		link.href = window.location.search.match(/print-pdf/gi) ?
+			"css/print/pdf.css" :
+			"css/print/paper.css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-markdown="./md/cover.md"></section>
+			<section>
+				<section>
+					<h2>Quem sou eu?</h2>
+					<div class="flex">
+						<div class="flex-1">
+							<ul>
+								<li class="fragment">Meu nome é Valdir Mendes</li>
+								<li class="fragment">Estudante/amante de desenvolvimento de software e tecnologia</li>
+								<li class="fragment">
+									Arquiteto de software na <a href="http://www.seidorbrasil.com.br"
+										target="_blank">Seidor Veritas</a>
+								</li>
+								<li class="fragment">
+									Sou organizador do <a href="https://www.meetup.com/sapiens-bh/"
+										target="_blank">Meetup SAPiens BH</a>
+								</li>
+							</ul>
+							<br />
+						</div>
+						<img alt="Profile's image" class="flex-item" height="540" src="img/Perfil.jpg" />
+					</div>
+				</section>
+				<section data-markdown="./md/contacts.md"></section>
+			</section>
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+			transition: "zoom", // none/fade/slide/convex/concave/zoom
+			dependencies: [{
+					src: "plugin/markdown/marked.js"
+				},
+				{
+					src: "plugin/markdown/markdown.js"
+				},
+				{
+					src: "plugin/notes/notes.js",
+					async: true
+				},
+				{
+					src: "plugin/highlight/highlight.js",
+					async: true
+				},
+				{
+					src: "plugin/zoom-js/zoom.js",
+					async: true
+				},
+				// MathJax
+				{
+					src: "plugin/math/math.js",
+					async: true
+				}
+			]
+		});
+	</script>
+</body>
+
 </html>
