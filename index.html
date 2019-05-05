@@ -1,117 +1,192 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-	<meta charset="utf-8" />
+    <title>ABAP Unit - Automating boring work</title>
+    <meta name="description" content="ABAP Unit - Why not use?" />
+    <meta name="author" content="Valdir Mendes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-	<title>ABAP Unit - Why not use?</title>
-	<meta name="description" content="ABAP Unit - Why not use?" />
-	<meta name="author" content="Valdir Mendes" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/league.css" id="theme" />
 
-	<link rel="stylesheet" href="css/reset.css" />
-	<link rel="stylesheet" href="css/reveal.css" />
-	<link rel="stylesheet" href="css/theme/league.css" id="theme" />
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+    <style type="text/css">
+      .flex {
+        display: flex;
+      }
 
-	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="lib/css/monokai.css" />
-	<style type="text/css">
-		.flex {
-			display: flex;
-		}
+      .flex-item {
+        display: flex;
+      }
 
-		.flex-item {
-			display: flex;
-		}
+      .flex-1 {
+        flex-grow: 1;
+      }
+    </style>
 
-		.flex-1 {
-			flex-grow: 1;
-		}
-	</style>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
 
-	<!-- Printing and PDF exports -->
-	<script>
-		var link = document.createElement("link");
-		link.rel = "stylesheet";
-		link.type = "text/css";
-		link.href = window.location.search.match(/print-pdf/gi) ?
-			"css/print/pdf.css" :
-			"css/print/paper.css";
-		document.getElementsByTagName("head")[0].appendChild(link);
-	</script>
-</head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>ABAP Unit</h1>
+          <h2>Automatizando o trabalho chato</h2>
+          <p>
+            Valdir Mendes
+            <br />
+            SAP Inside Track BH - 2019
+          </p>
+        </section>
+        <section>
+          <h2>Quem sou eu?</h2>
+          <div class="flex">
+            <div class="flex-1">
+              <ul>
+                <li>Meu nome é Valdir Mendes</li>
+                <li>
+                  Estudante/amante de desenvolvimento de software e tecnologia
+                </li>
+                <li>
+                  Arquiteto de software na
+                  <a href="http://www.seidorbrasil.com.br" target="_blank">Seidor Veritas</a>
+                </li>
+                <li>
+                  Organizador do
+                  <a target="_blank" href="https://www.meetup.com/sapiens-bh/" >Meetup SAPiens BH</a>
+                </li>
+              </ul>
+              <br />
+            </div>
+            <img
+              alt="Profile's image"
+              class="flex-item"
+              height="540"
+              src="img/perfil.jpg"
+            />
+          </div>
+        </section>
+        <section>
+          <h2>Novo método de desenvolvimento</h2>
+          <img
+            alt="Sátira - Novo método de desenvolvimento"
+            src="img/sembugs.png"
+          />
+        </section>
+        <section>
+          <h1>Cenário atual</h1>
+          <ul>
+            <li class="fragment">Nova demanda</li>
+            <li class="fragment">Codificar/implementar</li>
+            <li class="fragment">Executar/testar</li>
+            <li class="fragment">Debugar</li>
+            <li class="fragment">Corrigir bugs</li>
+            <li class="fragment">Loop até finalizar</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Sistema legado/correção de bugs</h2>
+          <img
+            alt="Sátira - Correção de bugs"
+            height="545"
+            src="img/agoravai.png"
+          />
+        </section>
+        <section>
+          <h2>Testes do funcional/cliente</h2>
+          <img
+            alt="Sátira - não precisamos de homologação"
+            src="img/homologacao.png"
+          />
+        </section>
+        <section>
+          <h2>Quanto tempo eu gasto?</h2>
+          <ul>
+            <li>Codificando regras que não sei onde irá impactar?</li>
+            <li>Aguardando alguém testar?</li>
+            <li>Aguardando cenário de teste?</li>
+            <li>Executando testes manuais, repetitivos e passíveis de erro?</li>
+            <li>Debugando para encontrar erros (pré e pós desenvolvimento)?</li>
+            <li>Corrigindo bugs usando tentativa e erro? (go horse)</li>
+          </ul>
+        </section>
+        <section>
+            <h1 style="text-shadow: none"><font color="#afafb6">No que isso impacta?</font></h1>
+            <h2><b>Na garantia do meu/seu trabalho!</b></h2>
+          </section>
+          <section></section>
+      </div>
+    </div>
 
-<body>
-	<div class="reveal">
-		<div class="slides">
-			<section data-markdown="./md/cover.md"></section>
-			<section>
-				<section>
-					<h2>Quem sou eu?</h2>
-					<div class="flex">
-						<div class="flex-1">
-							<ul>
-								<li class="fragment">Meu nome é Valdir Mendes</li>
-								<li class="fragment">Estudante/amante de desenvolvimento de software e tecnologia</li>
-								<li class="fragment">
-									Arquiteto de software na <a href="http://www.seidorbrasil.com.br"
-										target="_blank">Seidor Veritas</a>
-								</li>
-								<li class="fragment">
-									Sou organizador do <a href="https://www.meetup.com/sapiens-bh/"
-										target="_blank">Meetup SAPiens BH</a>
-								</li>
-							</ul>
-							<br />
-						</div>
-						<img alt="Profile's image" class="flex-item" height="540" src="img/Perfil.jpg" />
-					</div>
-				</section>
-				<section data-markdown="./md/contacts.md"></section>
-			</section>
-		</div>
-	</div>
+    <script src="js/reveal.js"></script>
 
-	<script src="js/reveal.js"></script>
-
-	<script>
-		// More info about config & dependencies:
-		// - https://github.com/hakimel/reveal.js#configuration
-		// - https://github.com/hakimel/reveal.js#dependencies
-		Reveal.initialize({
-			controls: true,
-			progress: true,
-			history: true,
-			center: true,
-			transition: "zoom", // none/fade/slide/convex/concave/zoom
-			dependencies: [{
-					src: "plugin/markdown/marked.js"
-				},
-				{
-					src: "plugin/markdown/markdown.js"
-				},
-				{
-					src: "plugin/notes/notes.js",
-					async: true
-				},
-				{
-					src: "plugin/highlight/highlight.js",
-					async: true
-				},
-				{
-					src: "plugin/zoom-js/zoom.js",
-					async: true
-				},
-				// MathJax
-				{
-					src: "plugin/math/math.js",
-					async: true
-				}
-			]
-		});
-	</script>
-</body>
-
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: "zoom", // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        dependencies: [
+          {
+            src: "plugin/markdown/marked.js"
+          },
+          {
+            src: "plugin/markdown/markdown.js"
+          },
+          {
+            src: "plugin/notes/notes.js",
+            async: true
+          },
+          {
+            src: "plugin/highlight/highlight.js",
+            async: true
+          },
+          {
+            src: "plugin/zoom-js/zoom.js",
+            async: true
+          },
+          // MathJax
+          {
+            src: "plugin/math/math.js",
+            async: true
+          },
+          {
+            src: 'node_modules/reveal.js-menu/menu.js'
+          }
+        ],
+        menu: {
+          themes: true,
+          transition: true,
+          numbers: true
+        },
+      });
+    </script>
+  </body>
 </html>
