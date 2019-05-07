@@ -96,29 +96,44 @@
           />
         </section>
         <section>
-          <h1>Cenário atual</h1>
-          <ul>
-            <li class="fragment">Nova demanda</li>
-            <li class="fragment">Codificar/implementar</li>
-            <li class="fragment">Executar/testar</li>
-            <li class="fragment">Debugar</li>
-            <li class="fragment">Corrigir bugs</li>
-            <li class="fragment">Loop até finalizar</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Sistema legado/correção de bugs</h2>
-          <img
-            alt="Sátira - Correção de bugs"
-            height="545"
-            src="img/agoravai.png"
-          />
+          <h1>Testar software é importante?</h1>
         </section>
         <section>
           <h2>Testes do funcional/cliente</h2>
           <img
             alt="Sátira - não precisamos de homologação"
             src="img/homologacao.png"
+          />
+        </section>
+        <section>
+          <h2>Desculpas para não testar</h2>
+          <ul>
+            <li>Demora muito para criar e executar</li>
+            <li>Alto Custo</li>
+            <li>Repetitivo</li>
+            <li>Chato de executar manualmente e passível de erros</li>
+            <li>Não tenho/conheço todos os cenários</li>
+            <li>"Só ocorre em PRD"</li>
+            <li>Não estava previso na estimativa</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Como fazemos hoje?</h1>
+          <ul>
+            <li>Nova demanda</li>
+            <li>Codificar/implementar</li>
+            <li>Execução de teste (quando dá)</li>
+            <li>Debugar</li>
+            <li>Corrigir bugs</li>
+            <li>Loop até "KBAR"!</li>
+          </ul>
+        </section>
+        <section>
+          <h2>E como ficamos?</h2>
+          <img
+            alt="Sátira - Correção de bugs"
+            height="545"
+            src="img/agoravai.png"
           />
         </section>
         <section>
@@ -133,12 +148,22 @@
           </ul>
         </section>
         <section>
-          <h1 style="text-shadow: none"><font color="#afafb6">No que isso impacta?</font></h1>
-          <h2>Na garantia do meu/seu trabalho!</h2>
+          <h2>Quem nunca?</h2>
+          <img
+            alt="Sátira - Dump se38"
+            height="545"
+            src="img/dump.jpg"
+          />
         </section>
         <section>
-          <h1 style="text-shadow: none"><font color="#afafb6">Solução?</font></h1>
-          <h1>Automatizar testes!</h1>
+          <h1 style="text-shadow: none"><font color="#afafb6">No que isso impacta?</font></h1>
+          <h2>Na garantia/confiança do seu trabalho!</h2>
+        </section>
+        <section>
+          <h1 style="text-shadow: none"><font color="#afafb6">Dá para melhorar?</font></h1>
+          <h2>Sim!</h2>
+          <h1 style="text-shadow: none"><font color="#afafb6">Como?</font></h1>
+          <h2>Fazer a máquina executar os testes!</h2>
         </section>
         <section>
           <h1>Testes unitários e ABAP Unit<h1>
@@ -148,34 +173,170 @@
           <p>É uma abordagem de teste de software onde as unidades/componentes de um software são testadas individualmente.</p>
         </section>
         <section>
-          <h2>Testes Unitários</h2>
+          <h2>Testes Unitários Automatizados</h2>
           <h3>Objetivos</h3>
           <ul>
             <li>Encontrar erros o mais breve possível</li>
-            <li>Escrever uma vez, executar sempre</li>
-            <li>A execução deve ser automatizada: Framework de testes</li>
+            <li>Escrever uma vez, executar frequentemente</li>
+            <li>Repetitivo: A máquina executa e analisa os resultados</li>
+            <li>Garantir que o código desenvolvido funciona conforme o esperado</li>
+            <li>A máquina não comete erros na execução</li>
           </ul>
         </section>
         <section>
           <h2>ABAP Unit</h2>
-          <p>É uma ferramenta de teste integrada ao ambiente de desenvolvimento ABAP que você pode usar para executar testes de unitários. Pode ser executada manualmente ou automaticamente.</p>
+          <p>É uma ferramenta de teste integrada ao ambiente de desenvolvimento ABAP utilizada para executar testes de unitários. Pode ser executada manualmente ou automaticamente.</p>
           <a href="https://help.sap.com/saphelp_ewm94/helpdata/en/49/18061c005338a1e10000000a421937/frameset.htm">Fonte: Documentação SAP</a>
         </section>
         <section>
-          <h2>Como funciona?</h2>
+          <h1><font color="#afafb6">Como funciona?</font></h1>
+          <h2>Fazer o que já fazemos hoje, porém de forma automatizada</h2>
         </section>
         <section>
-          <h2>Em uma classe ABAP</h2>
-          <img src="img/unit_test.png" alt="Diagrama de um teste unitário">
+          <h2>Nosso fluxo atual</h2>
+          <img src="img/fluxo_dev.png" alt="Fluxo de desenvolvimento">
         </section>
         <section>
-          <h2>Para estudar</h2>
+          <h2>Fluxo de automatização</h2>
+          <img src="img/fluxo_unit_test.png" alt="Fluxo de automatização do teste">
+        </section>
+        <section>
+          <h1>SAP GUI</h1>
+        </section>
+        <section>
+          <h2>Criação da classe</h2>
+          <img src="img/unit_01.png" alt="Criação da classe" height="540">
+        </section>
+        <section>
+          <h2>Método</h2>
+          <img src="img/unit_02.png" alt="Método">
+        </section>
+        <section>
+          <h2>Parâmetros do método</h2>
+          <img src="img/unit_03.png" alt="Parâmetros do método">
+        </section>
+        <section>
+          <h2>Código do método</h2>
+          <img src="img/unit_04.png" alt="Código do método">
+        </section>
+        <section>
+          <h2>Geração da classe de teste</h2>
+          <img src="img/unit_05.png" alt="Geração da classe de teste" height="540">
+        </section>
+        <section>
+          <h2>Assistente da geração</h2>
+          <img src="img/unit_06.png" alt="Assistente de geração" height="540">
+        </section>
+        <section>
+          <h2></h2>
+          <img src="img/unit_07.png" alt="Wizard">
+        </section>
+        <section>
+          <h2>Criar uma nova classe de teste</h2>
+          <img src="img/unit_08.png" alt="Wizard">
+        </section>
+        <section>
+          <h2></h2>
+          <img src="img/unit_09.png" alt="Wizard">
+        </section>
+        <section>
+          <img src="img/unit_10.png" alt="Wizard">
+        </section>
+        <section>
+          <img src="img/unit_11.png" alt="Wizard">
+        </section>
+        <section>
+          <h2>Ir para classes de teste (quando já exite)</h2>
+          <img src="img/unit_12.png" alt="Ir para classes de teste">
+        </section>
+        <section>
+          <h2>Código dos testes</h2>
+          <img src="img/unit_13.png" alt="Código de teste" height="540">
+        </section>
+        <section>
+          <h2>Rodar os testes</h2>
+          <img src="img/unit_14.png" alt="Rodar os testes">
+        </section>
+        <section>
+          <h2>Testes passam</h2>
+          <img src="img/unit_15.png" alt="Testes com sucesso">
+        </section>
+        <section>
+          <h2>Se altero a regra...</h2>
+          <img src="img/unit_16.png" alt="Alteração de regra">
+        </section>
+        <section>
+          <h2>Testes falham</h2>
+          <img src="img/unit_17.png" alt="Testes falham">
+        </section>
+        <section>
+          <h1>Eclipse</h1>
+          <h1>+</h1> 
+          <h2>ABAP Development Tools (ADT)</h2>
+        </section>
+        <section>
+          <h2>Código fonte</h2>
+          <img src="img/eclipse_1.png" alt="Código fonte" height="540">
+        </section>
+        <section>
+          <h2>Ir para classes de teste</h2>
+          <img src="img/eclipse_2.png" alt="Ir para classes de testes">
+        </section>
+        <section>
+          <h2>Código dos testes</h2>
+          <img src="img/eclipse_3.png" alt="" height="540">
+        </section>
+        <section>
+          <h2>Testes passam</h2>
+          <img src="img/eclipse_4.png" alt="Testes com sucesso">
+        </section>
+        <section>
+          <h2>Testes Falham</h2>
+          <img src="img/eclipse_5.png" alt="">
+        </section>
+        <section>
+          <h1>Dúvidas?</h1>
+        </section>
+        <section>
+          <h1>Linkedin</h1>
           <ul>
-            <li><a href="https://open.sap.com/courses/wtc1">Writing Testable Code for ABAP - OpenSAP</a></li>
+            <li>Ative o Bluetooth no dispositivo móvel.</li>
+            <li>Abra o app do Linkedin</li>
+            <li>Toque em <strong><font color="#afafb6">Minha rede</font></strong></li>
+            <li>Toque em <strong><font color="#afafb6">Na sua área</font></strong></li>
+          </ul>
+        </section>
+        <section data-markdown>
+          ## Meus contatos
+            
+            * Linkedin: [Valdir Mendes](https://www.linkedin.com/in/valdir-mendes-675bb524/)
+            * Skype: [valdir.mfjesus](https://join.skype.com/invite/CHR4bgJXCeOQ)
+            * Twitter: [@valdirmendesgt](https://twitter.com/valdirmendesgt)
+            * Email: [valdir.mfjesus@yahoo.com.br](mailto:valdir.mfjesus@yahoo.com.br)
+
+        </section>
+        <section>
+          <h2>Para estudar - SAP</h2>
+          <ul>
+            <li><a href="https://open.sap.com/courses/wtc1">Writing Testable Code for ABAP - Curso OpenSAP</a></li>
             <li><a href="https://www.sap.com/community/topics/abap-testing-analysis.html">ABAP Testing and Analysis</a></li>
             <li><a href="http://saptechnical.com/Tutorials/OOPS/ABAPUnit/Index.htm">Understanding ABAP Unit</a></li>
             <li><a href="https://help.sap.com/saphelp_ewm94/helpdata/en/49/18061c005338a1e10000000a421937/frameset.htm">ABAP Test and Analysis Tools</a></li>
+            <li><a href="https://www.sap-press.com/abap-unit-writing-and-executing-unit-tests_4298/">ABAP Unit: Writing and Executing Unit Tests - E-bite</a></li>
           </ul>
+        </section>
+        <section>
+          <h2>Para estudar - Geral</h2>
+          <ul>
+            <li><a href="https://www.casadocodigo.com.br/products/livro-testes-de-software">Testes automatizados de software</a></li>
+            <li><a href="https://www.casadocodigo.com.br/products/livro-tdd">Test-Driven Development</a></li>
+            <li><a href="https://www.casadocodigo.com.br/products/livro-testes-de-software">Testes automatizados de software</a></li>
+            <li><a href="https://www.amazon.com.br/Engenharia-Software-Uma-Abordagem-Profissional/dp/8580555337/ref=pd_sbs_14_2/130-9271035-2021562?_encoding=UTF8&pd_rd_i=8580555337&pd_rd_r=06bc2f1d-7063-11e9-bc3b-5ffc0e2db024&pd_rd_w=W9dTY&pd_rd_wg=arTv3&pf_rd_p=80c6065d-57d3-41bf-b15e-ee01dd80424f&pf_rd_r=RGBB9BCT50A4JKEJ46DV&psc=1&refRID=RGBB9BCT50A4JKEJ46DV">Engenharia de Software: Uma Abordagem Profissional</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Muito obrigado!</h2>
+          <img src="img/thank-you.gif" alt="Agradecimento">
         </section>
       </div>
     </div>
